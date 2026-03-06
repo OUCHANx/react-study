@@ -10,7 +10,25 @@
     <script type = "text/babel">
         const appEl = document.querySelector("#app");
         const root = ReactDOM.createRoot(appEl);
-        root.render(<h1>Hello React!</h1>);
+        // root.render(<h1>Hello React!</h1>);
+        // function Example() {
+        //     return <h1>Hello React</h1>;
+        // }
+        // root.render(<Example />);
+
+        const Example = () => <h1>Hello React</h1>
+
+        const Bestexample = () => {
+            return (
+                <div>
+                    <h1>Hello React</h1>
+                    <p>This is a best example</p>
+                </div>
+            )
+        }
+        //このようにreturnに続くjsxが複数行になるときは、()で括る必要がある
+        root.render(<Example />);
+        root.render(<Bestexample />);
     </script>
 </body>
 </html>
